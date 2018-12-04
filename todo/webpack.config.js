@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   entry: './todo_redux',
   output: {
-    filename: './dist/bundle.js',
+    filename: './bundle.js',
   },
   module: {
     rules: [
