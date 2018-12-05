@@ -3,7 +3,7 @@ import React from 'react';
 
 const todoListItem = ({todo}) => {
     return(
-        todo.title
+       <li> {todo.title}</li>
     );
 }
 export default todoListItem;
