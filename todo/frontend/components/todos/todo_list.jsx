@@ -6,9 +6,9 @@ class TodoList extends React.Component {
 
     render() {
       const { todos, receiveTodo } = this.props;
-       const todosArr = todos.map((todo) => <TodoListItem todo={todo} />
+       const todosArr = todos.map((todo) => <li key={todo.id}><TodoListItem todo={todo} /></li>
         )
-       
+      
       return(
         <div>
           <ul>

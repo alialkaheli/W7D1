@@ -1,5 +1,5 @@
 import React from 'react';
-import { uniqueId } from '../../util/id_generator'
+import  UniqueId from '../../util/id_generator'
 
 class TodoForm extends React.Component {
     constructor(props) {
@@ -12,13 +12,14 @@ class TodoForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     updateTodo(word){
-        return e =>this.setState({[word]: e.currentTarget.value});
+        return e =>this.setState({[word]: e.currentTarget.value} );
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const todo = Object.assign({}, this.state, { id: uniqueId() });
+        const todo = Object.assign({}, this.state, { id: UniqueId });
         this.props.receiveTodo(todo);
+        
         this.setState({
           title: "",
           body: ""

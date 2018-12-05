@@ -7,10 +7,10 @@ import allTodos from './frontend/reducers/selectors'
 import App from './frontend/components/app';
 
 const store = configStore();
-window.store = store;
-window.receiveTodo = receiveTodo;
-window.receiveTodos = receiveTodos;
-window.allTodos = allTodos;
+// window.store = store;
+// window.receiveTodo = receiveTodo;
+// window.receiveTodos = receiveTodos;
+// window.allTodos = allTodos;
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('content');
