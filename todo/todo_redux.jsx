@@ -4,6 +4,7 @@ import configStore from './frontend/store/store';
 import { receiveTodos, receiveTodo } from './frontend/actions/todo_actions'
 import Root from './frontend/components/root';
 import allTodos from './frontend/reducers/selectors'
+import App from './frontend/components/app';
 
 const store = configStore();
 window.store = store;
@@ -14,5 +15,5 @@ window.allTodos = allTodos;
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('content');
 
-    ReactDOM.render(<Root />, root);
+    ReactDOM.render(<Root store1={ store } />, root);
 });

@@ -1,7 +1,23 @@
-const todoList = () => {
-    return (
-        <h1>this is the todolist</h1>
-    )
-}
+import React, {Component} from 'react';
+import TodoListItem from './todo_list_item';
+import TodoForm from './todo_form';
 
-export default todoList;
+class TodoList extends React.Component {
+
+    render() {
+      const { todos, receiveTodo } = this.props;
+       const todosArr = todos.map((todo) => <TodoListItem todo={todo} />
+        )
+       
+      return(
+        <div>
+          <ul>
+            {todosArr}
+          </ul>
+          <TodoForm receiveTodo={ receiveTodo }/>
+        </div>
+      );
+    }
+  }
+
+export default TodoList;
